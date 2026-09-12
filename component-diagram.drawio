@@ -1,0 +1,225 @@
+<mxfile host="app.diagrams.net" agent="Lab3" version="24.0.0">
+  <diagram name="Component-Diagram" id="pharmacy15">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1940" pageHeight="940" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title" value="Lab 3 — UML Component Diagram | Pharmacy Expiry &amp; Re-order Dispatch Engine (Problem Statement #15)" style="text;html=1;align=center;verticalAlign=middle;fontSize=19;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="1880" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="Architectural style: Microservices  •  Varchas Shetty  •  PES2UG24CS575" style="text;html=1;align=center;verticalAlign=middle;fontSize=13" vertex="1" parent="1">
+          <mxGeometry x="30" y="52" width="1880" height="22" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="clientTier" value="Pharmacy User / Client Tier" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#999999;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontSize=13;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="30" y="130" width="250" height="500" as="geometry"/>
+        </mxCell>
+        <mxCell id="serviceTier" value="Service Tier «microservices»" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#999999;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontSize=13;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="650" y="100" width="920" height="760" as="geometry"/>
+        </mxCell>
+        <mxCell id="externalTier" value="External Systems" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#999999;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontSize=13;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="1630" y="220" width="270" height="440" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="pharmacist" value="«device»&lt;br&gt;&lt;b&gt;Pharmacist / Staff Portal&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;i&gt;inventory &amp;amp; order management&lt;/i&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="55" y="190" width="200" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="admin" value="«device»&lt;br&gt;&lt;b&gt;Pharmacy Admin Portal&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;i&gt;alerts &amp;amp; reports&lt;/i&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="55" y="300" width="200" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="gateway" value="«component»&lt;br&gt;&lt;b&gt;API Gateway&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;i&gt;request routing&lt;br&gt;authentication&lt;br&gt;TLS termination&lt;/i&gt;&lt;/font&gt;" style="shape=component;html=1;jettyWidth=16;jettyHeight=8;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;spacingLeft=14;fontSize=13" vertex="1" parent="1">
+          <mxGeometry x="350" y="220" width="230" height="250" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="inventory" value="«component»&lt;br&gt;&lt;b&gt;Inventory Management Service&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;i&gt;stock levels&lt;br&gt;batch tracking&lt;br&gt;medicine records&lt;/i&gt;&lt;/font&gt;" style="shape=component;html=1;jettyWidth=16;jettyHeight=8;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;spacingLeft=14;fontSize=13" vertex="1" parent="1">
+          <mxGeometry x="720" y="150" width="270" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="expiry" value="«component»&lt;br&gt;&lt;b&gt;Expiry Monitoring Service&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;i&gt;expiry-date checks&lt;br&gt;near-expiry alerts&lt;br&gt;expired stock detection&lt;/i&gt;&lt;/font&gt;" style="shape=component;html=1;jettyWidth=16;jettyHeight=8;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;spacingLeft=14;fontSize=13" vertex="1" parent="1">
+          <mxGeometry x="720" y="360" width="270" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="reorder" value="«component»&lt;br&gt;&lt;b&gt;Re-order Management Service&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;i&gt;re-order thresholds&lt;br&gt;purchase requests&lt;br&gt;stock replenishment&lt;/i&gt;&lt;/font&gt;" style="shape=component;html=1;jettyWidth=16;jettyHeight=8;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;spacingLeft=14;fontSize=13" vertex="1" parent="1">
+          <mxGeometry x="1060" y="360" width="270" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="dispatch" value="«component»&lt;br&gt;&lt;b&gt;Supplier / Dispatch Service&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;i&gt;supplier orders&lt;br&gt;dispatch tracking&lt;br&gt;delivery status&lt;/i&gt;&lt;/font&gt;" style="shape=component;html=1;jettyWidth=16;jettyHeight=8;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;spacingLeft=14;fontSize=13" vertex="1" parent="1">
+          <mxGeometry x="1060" y="600" width="270" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="order" value="«component»&lt;br&gt;&lt;b&gt;Order Manager&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;i&gt;re-order coordination&lt;br&gt;order status&lt;/i&gt;&lt;/font&gt;" style="shape=component;html=1;jettyWidth=16;jettyHeight=8;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;spacingLeft=14;fontSize=13" vertex="1" parent="1">
+          <mxGeometry x="1060" y="150" width="270" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="payment" value="«component»&lt;br&gt;&lt;b&gt;Payment Service&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;i&gt;supplier payment requests&lt;br&gt;payment status&lt;/i&gt;&lt;/font&gt;" style="shape=component;html=1;jettyWidth=16;jettyHeight=8;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;spacingLeft=14;fontSize=13" vertex="1" parent="1">
+          <mxGeometry x="1400" y="360" width="270" height="125" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="database" value="«database component»&lt;br&gt;&lt;b&gt;Pharmacy Database&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;i&gt;medicine, batch, expiry,&lt;br&gt;stock, supplier &amp;amp; order data&lt;/i&gt;&lt;/font&gt;" style="shape=cylinder;html=1;boundedLbl=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13" vertex="1" parent="1">
+          <mxGeometry x="720" y="610" width="270" height="125" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="supplier" value="«external system»&lt;br&gt;&lt;b&gt;Medicine Supplier&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;i&gt;purchase order / dispatch&lt;/i&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1660" y="270" width="210" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="paymentGateway" value="«external system»&lt;br&gt;&lt;b&gt;Payment Gateway&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;i&gt;secure payment processing&lt;/i&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1660" y="430" width="210" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="notification" value="«external system»&lt;br&gt;&lt;b&gt;Notification Service&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;i&gt;expiry / re-order alerts&lt;/i&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1660" y="590" width="210" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- Interfaces -->
+        <mxCell id="iInventory" value="IInventoryData&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;REST/JSON over HTTPS&lt;/font&gt;" style="ellipse;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalLabelPosition=top;verticalAlign=bottom;fontSize=10;labelBackgroundColor=#ffffff" vertex="1" parent="1">
+          <mxGeometry x="670" y="195" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="iExpiry" value="IExpiryAlert&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;REST/JSON&lt;/font&gt;" style="ellipse;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalLabelPosition=top;verticalAlign=bottom;fontSize=10;labelBackgroundColor=#ffffff" vertex="1" parent="1">
+          <mxGeometry x="1010" y="405" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="iStock" value="IStockStatus&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;REST/JSON&lt;/font&gt;" style="ellipse;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalLabelPosition=top;verticalAlign=bottom;fontSize=10;labelBackgroundColor=#ffffff" vertex="1" parent="1">
+          <mxGeometry x="1010" y="210" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="iReorder" value="IReOrder&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;REST/JSON over HTTPS&lt;/font&gt;" style="ellipse;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalLabelPosition=top;verticalAlign=bottom;fontSize=10;labelBackgroundColor=#ffffff" vertex="1" parent="1">
+          <mxGeometry x="1370" y="405" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="iDispatch" value="IDispatch&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;HTTPS&lt;/font&gt;" style="ellipse;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalLabelPosition=top;verticalAlign=bottom;fontSize=10;labelBackgroundColor=#ffffff" vertex="1" parent="1">
+          <mxGeometry x="1630" y="305" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="iPayment" value="IPayment&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;HTTPS / mTLS&lt;/font&gt;" style="ellipse;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalLabelPosition=top;verticalAlign=bottom;fontSize=10;labelBackgroundColor=#ffffff" vertex="1" parent="1">
+          <mxGeometry x="1370" y="450" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="iNotify" value="INotification&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;HTTPS&lt;/font&gt;" style="ellipse;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalLabelPosition=top;verticalAlign=bottom;fontSize=10;labelBackgroundColor=#ffffff" vertex="1" parent="1">
+          <mxGeometry x="1630" y="625" width="20" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- Required sockets -->
+        <mxCell id="sGateway" style="shape=requiredInterface;html=1;strokeColor=#000000;strokeWidth=2;direction=west" vertex="1" parent="1">
+          <mxGeometry x="600" y="270" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="sExpiry" style="shape=requiredInterface;html=1;strokeColor=#000000;strokeWidth=2;direction=east" vertex="1" parent="1">
+          <mxGeometry x="990" y="405" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="sReorder" style="shape=requiredInterface;html=1;strokeColor=#000000;strokeWidth=2;direction=east" vertex="1" parent="1">
+          <mxGeometry x="1330" y="405" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="sDispatch" style="shape=requiredInterface;html=1;strokeColor=#000000;strokeWidth=2;direction=east" vertex="1" parent="1">
+          <mxGeometry x="1330" y="650" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="sPayment" style="shape=requiredInterface;html=1;strokeColor=#000000;strokeWidth=2;direction=east" vertex="1" parent="1">
+          <mxGeometry x="1670" y="405" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="sDB" style="shape=requiredInterface;html=1;strokeColor=#000000;strokeWidth=2;direction=south" vertex="1" parent="1">
+          <mxGeometry x="850" y="575" width="20" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- Assembly connectors -->
+        <mxCell id="a1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle" edge="1" parent="1" source="sExpiry" target="iExpiry">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="a2" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle" edge="1" parent="1" source="sReorder" target="iReorder">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="a3" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle" edge="1" parent="1" source="sPayment" target="iPayment">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="a4" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle" edge="1" parent="1" source="sDispatch" target="iDispatch">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Service dependencies -->
+        <mxCell id="eInvExp" value="Inventory data" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="inventory" target="expiry">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="eInvRe" value="Stock status" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="inventory" target="reorder">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="eExpRe" value="Expiry alerts" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="expiry" target="reorder">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="eReOrder" value="Re-order request" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="reorder" target="order">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="eOrderDispatch" value="Dispatch request" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="order" target="dispatch">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="eOrderPayment" value="Payment request" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="order" target="payment">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="eDispatchSupplier" value="Purchase order" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="dispatch" target="supplier">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="ePaymentGateway" value="Secure payment" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="payment" target="paymentGateway">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Database connections -->
+        <mxCell id="eInvDB" value="Medicine / stock data" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="inventory" target="database">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="eExpDB" value="Expiry data" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="expiry" target="database">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="eReDB" value="Re-order records" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="reorder" target="database">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="eDisDB" value="Dispatch status" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="dispatch" target="database">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Client dependencies -->
+        <mxCell id="u1" value="«use» HTTPS / TLS" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="pharmacist" target="gateway">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="u2" value="«use» HTTPS / TLS" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="admin" target="gateway">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="u3" value="«use» notification" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="expiry" target="notification">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="u4" value="«use» notification" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="reorder" target="notification">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Gateway to services -->
+        <mxCell id="g1" value="Inventory API" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="gateway" target="inventory">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="g2" value="Expiry API" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="gateway" target="expiry">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="g3" value="Re-order API" style="endArrow=open;endFill=0;dashed=1;html=1;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff" edge="1" parent="1" source="gateway" target="reorder">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#999999" vertex="1" parent="1">
+          <mxGeometry x="30" y="680" width="250" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="legendTitle" value="&lt;b&gt;UML Notation&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="45" y="690" width="140" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ball" style="ellipse;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2" vertex="1" parent="1">
+          <mxGeometry x="50" y="725" width="14" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="ballText" value="Provided interface (ball)" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="80" y="718" width="180" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="socket" style="shape=requiredInterface;html=1;strokeColor=#000000;strokeWidth=2;direction=west" vertex="1" parent="1">
+          <mxGeometry x="50" y="760" width="14" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="socketText" value="Required interface (socket)" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="80" y="753" width="180" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="depLine" style="endArrow=open;endFill=0;dashed=1;strokeColor=#000000" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="50" y="800" as="sourcePoint"/>
+            <mxPoint x="75" y="800" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="depText" value="«use» dependency / data flow" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="80" y="788" width="190" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="note" value="&lt;b&gt;Main workflow&lt;/b&gt;&lt;br&gt;Inventory → Expiry Monitoring / Re-order Management → Order Manager → Supplier / Dispatch → Supplier.&lt;br&gt;&lt;br&gt;Payment Service handles secure supplier-payment requests. Pharmacy data is stored in the Pharmacy Database." style="shape=note;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="1630" y="710" width="270" height="150" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
